@@ -20,14 +20,11 @@ import tenis4_s from "../Assets/tenis4_s.png"
 import tenis5_s from "../Assets/tenis5_s.png"
 import tenis6_s from "../Assets/tenis6_s.png"
 import tenis7_s from "../Assets/tenis7_s.png"
+import {Classic,ClassicDescription,Indie, IndieDescription, Skate, SkateDescription, SkateGum,SkateGumDescription} from "./vans_info.js"
 
 export default function Main(){
-const FirstModel = "O Black Classic da Vans é um tênis luxuoso e confortável para os jovens que desejam esbanjar um estilo único. É adequado para homens e mulheres, com cabedal de couro de flor integral, língua e gola acolchoadas, sola de borracha. Cada par vem com um conjunto de 6 cadarços intercambiáveis ​​- quatro cores diferentes para combinar com sua roupa!"
-const SecondModel = ""
-const ThirdModel = ""
-const FourthModel = ""
-const [VansName,setVansName] = useState("BLACK CLASSIC")
-const [VansText,setVansText] = useState(FirstModel)
+const [VansName,setVansName] = useState(Classic)
+const [VansText,setVansText] = useState(ClassicDescription)
 const [Shoe, setShoe] = useState(tenis4_s)
 const [indexShoe,setIndexShoe] = useState(3)
 const [FirstGrown, setFirstGrown] = useState(false)
@@ -99,6 +96,8 @@ const [SeventhGrown, setSeventhGrown] = useState(false)
                     setFifthGrown(false)
                     setSixthGrown(false)
                     setSeventhGrown(false)
+                    setVansName(Skate)
+                    setVansText(SkateDescription)
                     setShoe(tenis3_s)}} src={tenis3}  alt="" />
                 <S.CarroselImage isOn={FourthGrown} onClick={()=> {setIndexShoe(3)
                 setFirstGrown(false) 
@@ -108,6 +107,8 @@ const [SeventhGrown, setSeventhGrown] = useState(false)
                 setFifthGrown(false)
                 setSixthGrown(false)
                 setSeventhGrown(false)
+                setVansName(Classic)
+                setVansText(ClassicDescription)
                 setShoe(tenis4_s)}} src={tenis4}  alt="" />
                 <S.CarroselImage isOn={Fifhtrown} onClick={()=> {setIndexShoe(4)
                 setFirstGrown(false) 
@@ -126,6 +127,8 @@ const [SeventhGrown, setSeventhGrown] = useState(false)
                 setFifthGrown(false)
                 setSixthGrown(true)
                 setSeventhGrown(false)
+                setVansName(Indie)
+                setVansText(IndieDescription)
                 setShoe(tenis6_s)}} src={tenis6}  alt="" />
                 <S.CarroselImage isOn={SeventhGrown} onClick={()=> {setIndexShoe(6)
                 setFirstGrown(false) 
